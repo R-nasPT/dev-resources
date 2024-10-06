@@ -75,13 +75,13 @@ git config user.name
 # Utility Commands
 ## 1. การสร้าง Secret Key
 ### คำสั่ง:
-```
+```bash
 node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
 ```
 ### คำอธิบาย:
 คำสั่งนี้จะสร้างสตริงสุ่มขนาด 256 ไบต์ที่เข้ารหัสแบบ base64 เหมาะสำหรับใช้เป็น secret key ในแอปพลิเคชันของคุณ คำสั่งนี้ใช้ Node.js และโมดูล `crypto` ที่มีอยู่ในตัวเพื่อสร้างคีย์สุ่มที่มีความปลอดภัยทางคริปโตกราฟี
 ### ตัวเลือก:
 - หากต้องการเปลี่ยนความยาวของคีย์ ให้แก้ไขตัวเลขใน `randomBytes()` เช่น สำหรับคีย์ขนาด 128 ไบต์:
-  ```
+  ```bash
   node -e "console.log(require('crypto').randomBytes(128).toString('base64'));"
   ```
