@@ -23,6 +23,7 @@
 ### Select & Dropdown
 - `react-select`: Customizable select input component.
 - `react-animate-height`: Animate height for dropdown sliding effects.
+- `react-tailwindcss-datepicker`: Datepicker component styled with Tailwind CSS.
 
 ### Charts
 - `chart.js` & `react-chartjs-2`: For data visualization in React.
@@ -66,6 +67,23 @@
   const cn = twMerge(clsx(...));
   ```
   This combination is used to merge Tailwind CSS classes with conditional logic for improved class management.
+
+### Document & Media Processing
+- `react-to-print`: Library for printing React components.
+- `@react-pdf/renderer`: Library for creating PDF documents in React.
+- `react-pdf-tailwind`: Styling for PDFs using Tailwind CSS.
+- `react-barcode`: Barcode generator for React.
+- `react-qr-code`: QR code generator for React.
+- `@zxing/library`: Library for barcode scanning.
+- `react-media-recorder`: Library for recording audio and video in React.
+- `exceljs`: Library for reading, manipulating, and writing spreadsheet data.
+
+### Date and Time Libraries
+- `date-fns`: A modern JavaScript date utility library for parsing, formatting, and manipulating dates.
+- `@date-fns/tz`: Time zone support for date-fns.
+- `@date-fns/utc`: UTC support for date-fns.
+- `dayjs`: A lightweight alternative to Moment.js for manipulating dates.
+
 ---
 
 ## BACK END
@@ -94,7 +112,7 @@
 ### Back-end
 - `(bcrypt & @types/bcrypt)` | `(bcryptjs & @types/bcryptjs)` | `bcrypt-ts`: Hashing passwords.
 - `@types/jsonwebtoken` & `jsonwebtoken`: JWT handling for authentication.
-- **Tip (Simplified)**: `jose`: A utility library for handling JWT.
+- **Tip (Simplified)**: `jose`: A utility library for handling JWT and JWS.
 
 ---
 
