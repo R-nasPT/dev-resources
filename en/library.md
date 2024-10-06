@@ -26,6 +26,7 @@
 
 ### Charts
 - `chart.js` & `react-chartjs-2`: For data visualization in React.
+- `Recharts`: A composable charting library built on React components.
 
 ### Drag and Drop
 - `react-beautiful-dnd`: Drag-and-drop interface building library.
