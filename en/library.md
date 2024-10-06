@@ -132,16 +132,3 @@
 
 ### Back-end
 - `socket.io`: WebSocket server for real-time applications.
-
----
-
-# Utility Commands
-
-## Create Secret Key
-To generate a secret key, run the following command in your terminal:
-
-```bash
-node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
-```
-
-This command will output a random 256-byte string encoded in base64, suitable for use as a secret key in your applications.
