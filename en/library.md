@@ -13,7 +13,8 @@
 - `yup` | `zod` | `joi` | `ajv`: Schema validation libraries.
 
 ### Data Fetching & State Management
-- `axios` | `use-axios-client`: HTTP client libraries for making API requests.
+- `axios`: A HTTP library for making API requests.
+- `use-axios-client`: A custom React hook for using axios in React components.
 - `@reduxjs/toolkit` | `react-redux`: State management using Redux in React.
 - `zustand`: Lightweight state management library.
 
