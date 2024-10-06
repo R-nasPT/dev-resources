@@ -4,9 +4,15 @@ This repository is my personal collection of useful developer resources, includi
 
 ## Contents
 
-1. [commands.md](commands.md) - A list of commonly used commands and their explanations.
-2. [useful-links.md](useful-links.md) - A curated list of helpful links for various development topics.
-3. [library.md](library.md) - Information about libraries and frameworks used in my projects.
+### English
+1. [Commands](./en/commands.md) - A list of commonly used commands and their explanations.
+2. [Useful Links](./en/useful-links.md) - A curated list of helpful links for various development topics.
+3. [Library](./en/library.md) - Information about libraries and frameworks used in my projects.
+
+### ภาษาไทย
+1. [Commands](./th/commands.md) - รายการคำสั่งที่ใช้บ่อยและคำอธิบายการใช้งาน.
+2. [Useful Links](./th/useful-links.md) - ลิงก์ที่มีประโยชน์สำหรับหัวข้อต่างๆ ในการพัฒนา.
+3. [Library](./th/library.md) - ข้อมูลเกี่ยวกับไลบรารีและเฟรมเวิร์กที่ใช้ในโปรเจกต์ของฉัน.
 
 ## Purpose
 
