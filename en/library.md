@@ -2,9 +2,12 @@
 
 ### Routing
 - `react-router-dom`: Routing for React applications.
+- `@tanstack/router`: A powerful routing library for React applications with features like nested routes and data loading.
+- `@tanstack/router-devtools`: Development tools for inspecting and debugging routing in applications that use `@tanstack/router`.
 
 ### Forms & Validation
-- `@tanstack/react-query`**: Data fetching and caching.
+- `@tanstack/react-query`: Data fetching and caching.
+- `@tanstack/react-query-devtools`: Tools for debugging and inspecting queries in `@tanstack/react-query`.
 - `swr` (stale-while-revalidate): React Hooks for data fetching.
 - `react-hook-form` & `@hookform/resolvers`: Form handling in React.
 - `yup` | `zod` | `joi` | `ajv`: Schema validation libraries.
