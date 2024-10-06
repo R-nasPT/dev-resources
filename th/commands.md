@@ -46,7 +46,7 @@ git config user.email
   ```
   git config user.email "newemail@example.com"
   ```
-- ตั้งค่าอีเมลแบบ global:
+- ตั้งค่าอีเมลสำหรับทุกโปรเจกต์ (แบบ global):
   ```
   git config --global user.email "newemail@example.com"
   ```
@@ -66,7 +66,7 @@ git config user.name
   ```
   git config user.name "New Name"
   ```
-- ตั้งชื่อแบบ global:
+- ตั้งชื่อสำหรับทุกโปรเจกต์ (แบบ global):
   ```
   git config --global user.name "New Name"
   ```
