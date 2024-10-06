@@ -75,13 +75,13 @@ This command displays the username configured for Git, which is used in the comm
 # Utility Commands
 ## 1. Creating a Secret Key
 ### Command:
-```
+```bash
 node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
 ```
 ### Description:
 This command generates a random 256-byte string encoded in base64, suitable for use as a secret key in your applications. It uses Node.js and the built-in `crypto` module to create a cryptographically strong random key.
 ### Options:
 - To change the key length, modify the number in `randomBytes()`. For example, for a 128-byte key:
-  ```
+  ```bash
   node -e "console.log(require('crypto').randomBytes(128).toString('base64'));"
   ```
