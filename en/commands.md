@@ -43,11 +43,11 @@ This command displays the email address configured for the current project in Gi
 
 ### Options:
 - Set the email for the current project:
-  ```
+  ```bash
   git config user.email "newemail@example.com"
   ```
 - Set the email globally:
-  ```
+  ```bash
   git config --global user.email "newemail@example.com"
   ```
 
@@ -63,13 +63,57 @@ This command displays the username configured for Git, which is used in the comm
 
 ### Options:
 - Set the username for the current project:
-  ```
+  ```bash
   git config user.name "New Name"
   ```
 - Set the username globally:
-  ```
+  ```bash
   git config --global user.name "New Name"
   ```
+## 5. Setting Up SSH Key for GitHub
+### Generate SSH Key
+1. Open Terminal and run the following command:
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+Note: If you're using a legacy system that doesn't support Ed25519 algorithm, use:
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+2. จากนั้น Terminal จะถามที่อยู่ที่เอาไว้เก็บ Key ถ้าเรามีชื่อไฟล์และโฟลเดอร์ที่จะเอาไว้เก็บ Key ก็ให้ใส่เป็น File path แต่ถ้าไม่มีจะใช้ชื่อไฟล์และโฟลเดอร์ที่โปรแกรมกำหนดให้ในวงเล็บคือ 
+```bash
+# ตั่งชื่อไฟล์เอง
+> Enter file in which to save the key (C:\Users\YouFolderName/.ssh/id_ed25519):  C:\Users\YouFolderName/.ssh/my_custom_key
+# or
+> Enter file in which to save the key (C:\Users\YouFolderName/.ssh/id_ed25519): # สามารถกด Enter เพื่อใช้ชื่อไฟล์เริ่มต้น (id_ed25519) ได้เลย
+```
+3. จากนั้นโปรแกรมก็จะถามต่อว่าอยากจะใส่ Passphrase หรือไม่
+```bash
+> Enter passphrase (empty for no passphrase): [ใส่ Passphrase ที่คุณต้องการ]
+> Enter same passphrase again: [ยืนยัน Passphrase อีกครั้ง]
+```
+หากคุณไม่ต้องการตั้ง Passphrase (ไม่แนะนำ เพราะคีย์ SSH จะไม่มีรหัสป้องกัน) ให้กด Enter โดยไม่ต้องพิมพ์อะไร
+
+4. จากนั้นโปรแกรมจะแจ้งเราว่า Private Key และ Public Key ได้ถูกสร้างแล้ว
+```bash
+> Your identification has been saved in C:\Users\YouFolderName/.ssh/id_ed25519
+> Your public key has been saved in C:\Users\YouFolderName/.ssh/id_ed25519.pub
+> The key fingerprint is:
+> SHA256:EX+amP1eT3stteST your_email@example.com
+> The key's randomart image is:
++--[ED25519 256]--+
+| =EXX*=*.o       |
+|X*AAM.+.P .      |
+|P+Le*.P+.LE      |
+| T +.E ...       |
+|.   .  .o o      |
+|      S .. T     |
+|       +.-       |
+|       ..        |
+|  TE++S==to      |
++----[SHA256]-----+
+```
+
 ---
 
 # Utility Commands
