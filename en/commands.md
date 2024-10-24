@@ -114,6 +114,69 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 +----[SHA256]-----+
 ```
 
+### Add SSH Key to SSH Agent
+ คำเตือน: คุณสามารถเลือก ไม่เพิ่ม SSH key ไปยัง SSH agent ได้ แต่สิ่งนี้หมายความว่าเมื่อคุณต้องการใช้ SSH key (เช่นในการเชื่อมต่อกับ GitHub หรือเซิร์ฟเวอร์), คุณจะต้องพิมพ์ Passphrase ของ SSH key ทุกครั้งที่ทำการเชื่อมต่อ หรือหากคุณไม่ได้ตั้งค่า Passphrase ไว้ การเชื่อมต่อจะดำเนินการโดยไม่ต้องผ่าน SSH agent และจะไม่ต้องพิมพ์รหัสผ่านใด ๆ
+ - ถ้าคุณไม่เพิ่ม SSH key ไปยัง SSH agent: คุณจะต้องป้อน Passphrase (หากตั้งไว้) ทุกครั้งที่มีการใช้งาน SSH key
+ - ถ้าคุณเพิ่ม SSH key ไปยัง SSH agent: SSH agent จะจัดการกับ SSH key ของคุณ และคุณจะไม่ต้องป้อน Passphrase ซ้ำเมื่อใช้งาน
+
+1. เพิ่ม SSH key ไปยัง SSH agent เพื่อให้ SSH agent จัดการคีย์ให้ คุณสามารถใช้คำสั่งนี้:
+
+   - Start the SSH agent:
+     ```bash
+      eval "$(ssh-agent -s)"
+      ```
+   - Add your SSH private key to the agent:
+    ```bash
+      ssh-add ~/.ssh/id_ed25519
+    
+    # If you used RSA, the command would be:
+      ssh-add ~/.ssh/id_rsa
+    ```
+
+### Add SSH Key to GitHub Account
+1. Copy the SSH public key to clipboard:
+- For macOS:
+```bash
+pbcopy < ~/.ssh/id_ed25519.pub
+# or
+gc .\.ssh\id_ed25519.pub
+```
+If you want to see the Public Key before copying, you can use this command:
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+- For Windows (Git Bash):
+```bash
+clip < C:/Users/YouFolderName/.ssh/id_ed25519.pub
+```
+If you want to see the Public Key before copying, you can use this command:
+```bash
+type C:\Users\YouFolderName\.ssh\id_ed25519.pub
+```
+
+วิธีอื่นในการดูไฟล์ Public Key:
+เปิดไฟล์ .pub ด้วย Notepad หรือโปรแกรม text editor ใด ๆ
+และคุณสามารถเปิดไฟล์นี้ด้วยคำสั่ง:
+```bash
+notepad C:\Users\YouFolderName\.ssh\id_ed25519.pub
+```
+
+2. Go to GitHub website:
+   - Click your profile photo
+   - Go to "Settings > SSH and GPG keys"
+   - Click "New SSH key"
+   - วาง public key ที่คุณคัดลอกมาในช่อง "Key" และตั้งชื่อในช่อง "Title"
+   - Click "Add SSH key"
+
+### Test SSH Connection
+```bash
+ssh -T git@github.com
+```
+If successful, you'll see a message like:
+```
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
 ---
 
 # Utility Commands
