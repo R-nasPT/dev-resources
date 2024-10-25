@@ -29,7 +29,9 @@ git revert HEAD
 ```
 
 ### Description:
-This command creates a new commit that undoes the changes made by the previous commit. Use this when you want to reverse the effects of a commit without altering the commit history.
+- This command creates a new commit that undoes the changes made by the previous commit. Use this when you want to reverse the effects of a commit without altering the commit history.
+- Reverting is the process of undoing changes by creating a new commit that mirrors the version prior to the commit being reverted.
+- Reverting is safer than resetting because the entire history of changes is preserved.
 
 ## 3. Displaying the User's Configured Email
 
