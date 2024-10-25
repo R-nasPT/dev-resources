@@ -90,8 +90,8 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
 3. Next, you’ll be asked to enter a passphrase. You can add a passphrase for additional security or press Enter to skip (not recommended for security reasons):
 ```bash
-> Enter passphrase (empty for no passphrase): [ใส่ Passphrase ที่คุณต้องการ]
-> Enter same passphrase again: [ยืนยัน Passphrase อีกครั้ง]
+> Enter passphrase (empty for no passphrase): [Type your passphrase]
+> Enter same passphrase again: [Confirm your passphrase]
 ```
 
 4. Once complete, you’ll see a message indicating the private and public keys have been generated:
