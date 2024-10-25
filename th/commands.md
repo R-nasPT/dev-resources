@@ -227,7 +227,68 @@ ssh -T git@github.com
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+## 7. วิธีการเขียน Commit Message ที่ดี
+ตามหลักการนี้ ตัว Commit Message ควรจะอยู่ในรูปแบบ `type(scope?): subject`
 
+- `type` คือ ชนิดของ Commit
+- `(scope?)` คือ ขอบเขตของการเปลี่ยนแปลงใน Commit ส่วนนี้เป็นส่วนที่ไม่จำเป็นต้องมีก็ได้
+- `subject` คือ รายละเอียดของการเปลี่ยนแปลงที่ทำใน Commit
+
+  **ตัวอย่างการเขียน Commit message ที่ดี**
+
+  ```bash
+  git commit -m "feat(blog): add comment section"
+  git commit -m "feat: add header section on landing page"
+  git commit -m "fix(product-listing): limit display product to 10"
+  git commit -m "test(payment): ensure checkout function"
+  git commit -m "test: ensure landing page"
+  git commit -m "perf(dashboard): decrease loading time on graphs"
+  ```
+**รายระเอียดของ type แต่ละแบบ**
+
+| **“type”** | **รายละเอียด** |
+| --- | --- |
+| feat | ใช้กำกับ Commit ที่เกี่ยวข้องกับการทำ Feature ใหม่ๆ เช่น ระบบลงทะเบียน, ระบบอัพเดทโปรไฟล์ |
+| fix | ใช้กำกับ Commit ที่เกี่ยวข้องกับการแก้ไขข้อผิดพลาดที่เกิดจากการเขียนโค้ด |
+| style | ใช้กำกับ Commit ที่เกี่ยวข้องกับการทำให้หน้าตาเว็บไซท์ดูดีขึ้น |
+| docs | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Documents (เอกสาร) เช่น เอกสารที่ระบุสเปคของโปรแกรม |
+| perf | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับ Performance (ประสิทธิภาพการทำงาน) ของโปรแกรม |
+| refactor | ใช้กำกับ Commit ที่เกี่ยวข้องกับการ Refactor คือการเขียนโค้ดอีกแบบที่ให้ผลลัพธ์เหมือนเดิม |
+| revert | ใช้กำกับ Commit ที่เกี่ยวข้องกับการ Revert |
+| test | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Test (ชุดทดสอบการทำงานของโปรแกรม) |
+
+**ตัวเลือกเพิ่มเติมสำหรับ git commit:**
+- `-m` (message)
+  - **การใช้งาน**: ใช้เมื่อคุณต้องการคอมมิทการเปลี่ยนแปลงในไฟล์ที่อยู่ใน Staging Area
+  - **คำสั่ง**:
+  ```bash
+  git commit -m "Your commit message here"
+  ```
+  - **การทำงาน**: คำสั่งนี้จะทำการคอมมิทเฉพาะไฟล์ที่ถูกเพิ่มใน Staging Area โดยใช้ `git add` ก่อนหน้านี้
+
+- `-am` (automatic + message)
+  - **การใช้งาน**: ใช้เมื่อคุณต้องการคอมมิทการเปลี่ยนแปลงในไฟล์ที่ถูกติดตาม (tracked files) และต้องการให้ Git เพิ่มไฟล์เหล่านั้นไปยัง Staging Area อัตโนมัติ
+  - **คำสั่ง**:
+  ```bash
+  git commit -am "Your commit message here"
+  ```
+  - **การทำงาน**: คำสั่งนี้จะทำการคอมมิทการเปลี่ยนแปลงทั้งหมดในไฟล์ที่ถูกติดตามที่มีการแก้ไขแล้ว โดยไม่จำเป็นต้องใช้ `git add`
+
+- `--amend`
+  - ทำการแก้ไขไฟล์ หรือเพิ่มไฟล์ใหม่ที่ต้องการรวมไว้ในคอมมิทล่าสุด
+  - ใช้คำสั่ง git add เพื่อเพิ่มไฟล์ที่คุณต้องการรวมเข้าไป (ถ้าเป็นไฟล์ใหม่)
+  ```bash
+  git commit --amend -m "New commit message"
+  ```
+   - **เพิ่มการเปลี่ยนแปลง**: การใช้ --amend จะรวมการเปลี่ยนแปลงใหม่ที่คุณทำใน Working Directory เข้ากับคอมมิทล่าสุด
+   - **ปลี่ยนข้อความคอมมิท**: คุณสามารถระบุข้อความใหม่ใน -m เพื่อเปลี่ยนข้อความของคอมมิทล่าสุด
+  **หมายเหตุ**
+  - **ไม่ควรใช้กับคอมมิทที่เผยแพร่**: การใช้ --amend จะเปลี่ยนประวัติการคอมมิท ซึ่งอาจทำให้เกิดปัญหาหากมีคนอื่นที่ใช้คอมมิทนั้นอยู่แล้ว
+  - หากคุณต้องการเพียงแค่เปลี่ยนข้อความคอมมิทล่าสุดโดยไม่เพิ่มการเปลี่ยนแปลงใหม่ สามารถทำได้โดยไม่ต้องใช้ -m เพียงแค่ใช้:
+  ```
+  git commit --amend
+  # แล้ว Git จะเปิด editor ให้คุณแก้ไขข้อความคอมมิท
+  ```
 ---
 
 # Utility Commands
