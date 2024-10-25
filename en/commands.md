@@ -1,6 +1,37 @@
 # Git Commands
 
-## 1. Resetting to the Previous Commit
+## 1. Git Areas
+
+Git organizes files into three main areas:
+
+### Working Directory 
+Alternative Names:
+- Working Area
+- Working Tree
+- Workspace
+
+**Description**: This is the area where you actively work on your project files. Here, you can create, edit, and delete files directly. However, files in this area are not yet tracked by Git until they are added to the Staging Area using `git add`.
+
+### Staging Area
+Alternative Names:
+- Index
+- Cache
+- Stage
+
+**Description**: This area is where you prepare files to be committed. When you run the command `git add <filename>`, the file moves from the Working Directory to the Staging Area. This allows you to select specific files for commit, helping you control what changes you save in each version.
+
+### Repository 
+Alternative Names:
+- Repository Area
+- Git Repository
+- Repo
+- .git Directory
+
+**Description**: This is where Git stores the complete history of changes (commits) for the project. When you commit changes using `git commit`, the staged changes are saved into the Repository, which serves as the long-term storage of your project’s version history.
+
+Understanding these Git Areas allows you to better manage project changes and effectively organize code versions!
+
+## 2. Resetting to the Previous Commit
 
 ### Command :
 ```
@@ -21,7 +52,7 @@ This command resets the `HEAD` to the previous commit. By default, it uses the `
   git reset --hard HEAD~1
   ```
 
-## 2. Reverting the Last Commit
+## 3. Reverting the Last Commit
 
 ### Command:
 ```
@@ -33,7 +64,7 @@ git revert HEAD
 - Reverting is the process of undoing changes by creating a new commit that mirrors the version prior to the commit being reverted.
 - Reverting is safer than resetting because the entire history of changes is preserved.
 
-## 3. Displaying the User's Configured Email
+## 4. Displaying the User's Configured Email
 
 ### Command:
 ```
@@ -53,7 +84,7 @@ This command displays the email address configured for the current project in Gi
   git config --global user.email "newemail@example.com"
   ```
 
-## 4. Displaying the User's Configured Name
+## 5. Displaying the User's Configured Name
 
 ### Command:
 ```
@@ -72,7 +103,7 @@ This command displays the username configured for Git, which is used in the comm
   ```bash
   git config --global user.name "New Name"
   ```
-## 5. Setting Up SSH Key for GitHub
+## 6. Setting Up SSH Key for GitHub
 ### Generate SSH Key
 1. Open Terminal and run the following command:
 ```bash
