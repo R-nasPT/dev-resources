@@ -60,7 +60,7 @@ git reset HEAD~1
 |                      | **ผลกระทบต่อไฟล์ที่ได้แก้ไขไป** | **สิ่งที่ต้องทำหากต้องการ Commit ใหม่**       | **คำสั่ง**                          |
 |----------------------|----------------------------------|-------------------------------------------------|-------------------------------------|
 | **Soft Reset**       | ย้ายไปอยู่ Staging Area          | Commit ใหม่ได้เลย                              | `git reset --soft <target_commit_id>` |
-| **Mixed Reset (default)** | ย้ายไปอยู่ Working Area       | ต้องเลือกไฟล์เข้าไปใน Staging Area ก่อน       | `git reset --mixed <target_commit_id>` |
+| **Mixed Reset (default)** | ย้ายไปอยู่ Working Directory       | ต้องเลือกไฟล์เข้าไปใน Staging Area ก่อน       | `git reset --mixed <target_commit_id>` |
 | **Hard Reset**       | หายไปอย่างถาวร                   | ต้องทำการแก้ไขใหม่ทั้งหมด                    | `git reset --hard <target_commit_id>` |
 
 
