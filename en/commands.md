@@ -70,13 +70,13 @@ This command displays the username configured for Git, which is used in the comm
   ```bash
   git config --global user.name "New Name"
   ```
-## 5. Setting Up SSH Key for GitHub
-### Generate SSH Key
-1. Open Terminal and run the following command:
+## 5. การตั้งค่า SSH Key สำหรับ GitHub
+### การสร้าง SSH Key
+1. เปิด Terminal หรือ Command Prompt แล้วรันคำสั่งต่อไปนี้:
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-Note: If you're using a legacy system that doesn't support Ed25519 algorithm, use:
+  **หมายเหตุ**: สำหรับระบบเก่าที่ไม่รองรับ Ed25519 ให้ใช้คำสั่งนี้แทน:
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
@@ -92,7 +92,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 > Enter passphrase (empty for no passphrase): [ใส่ Passphrase ที่คุณต้องการ]
 > Enter same passphrase again: [ยืนยัน Passphrase อีกครั้ง]
 ```
-หากคุณไม่ต้องการตั้ง Passphrase (ไม่แนะนำ เพราะคีย์ SSH จะไม่มีรหัสป้องกัน) ให้กด Enter โดยไม่ต้องพิมพ์อะไร
+  **ข้อควรทราบ**: หากคุณไม่ต้องการตั้ง Passphrase (ไม่แนะนำ เพราะคีย์ SSH จะไม่มีรหัสป้องกัน) ให้กด Enter โดยไม่ต้องพิมพ์อะไร
 
 4. จากนั้นโปรแกรมจะแจ้งเราว่า Private Key และ Public Key ได้ถูกสร้างแล้ว
 ```bash
@@ -114,11 +114,13 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 +----[SHA256]-----+
 ```
 
-### Add SSH Key to SSH Agent
- คำเตือน: คุณสามารถเลือก ไม่เพิ่ม SSH key ไปยัง SSH agent ได้ แต่สิ่งนี้หมายความว่าเมื่อคุณต้องการใช้ SSH key (เช่นในการเชื่อมต่อกับ GitHub หรือเซิร์ฟเวอร์), คุณจะต้องพิมพ์ Passphrase ของ SSH key ทุกครั้งที่ทำการเชื่อมต่อ หรือหากคุณไม่ได้ตั้งค่า Passphrase ไว้ การเชื่อมต่อจะดำเนินการโดยไม่ต้องผ่าน SSH agent และจะไม่ต้องพิมพ์รหัสผ่านใด ๆ
+### การเพิ่ม SSH Key เข้า SSH Agent
+ **ข้อควรรู้เกี่ยวกับ SSH Agent**: 
+ คุณสามารถเลือก ไม่เพิ่ม SSH key ไปยัง SSH agent ได้ แต่สิ่งนี้หมายความว่าเมื่อคุณต้องการใช้ SSH key (เช่นในการเชื่อมต่อกับ GitHub หรือเซิร์ฟเวอร์), คุณจะต้องพิมพ์ Passphrase ของ SSH key ทุกครั้งที่ทำการเชื่อมต่อ หรือหากคุณไม่ได้ตั้งค่า Passphrase ไว้ การเชื่อมต่อจะดำเนินการโดยไม่ต้องผ่าน SSH agent และจะไม่ต้องพิมพ์รหัสผ่านใด ๆ
  - ถ้าคุณไม่เพิ่ม SSH key ไปยัง SSH agent: คุณจะต้องป้อน Passphrase (หากตั้งไว้) ทุกครั้งที่มีการใช้งาน SSH key
  - ถ้าคุณเพิ่ม SSH key ไปยัง SSH agent: SSH agent จะจัดการกับ SSH key ของคุณ และคุณจะไม่ต้องป้อน Passphrase ซ้ำเมื่อใช้งาน
 
+**ขั้นตอนการเพิ่ม SSH Key เข้า SSH Agent**: 
 1. เพิ่ม SSH key ไปยัง SSH agent เพื่อให้ SSH agent จัดการคีย์ให้ คุณสามารถใช้คำสั่งนี้:
 
    - Start the SSH agent:
@@ -129,51 +131,53 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```bash
       ssh-add ~/.ssh/id_ed25519
     
-    # If you used RSA, the command would be:
+    # กรณีใช้ RSA:
       ssh-add ~/.ssh/id_rsa
     ```
 
-### Add SSH Key to GitHub Account
-1. Copy the SSH public key to clipboard:
-- For macOS:
+### การเพิ่ม SSH Key เข้าบัญชี GitHub
+1. คัดลอก SSH public key ไปยังคลิปบอร์ด:
+- สำหรับ  macOS:
 ```bash
 pbcopy < ~/.ssh/id_ed25519.pub
 # or
 gc .\.ssh\id_ed25519.pub
 ```
-If you want to see the Public Key before copying, you can use this command:
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
 
-- For Windows (Git Bash):
+- สำหรับ  Windows:
 ```bash
 clip < C:/Users/YouFolderName/.ssh/id_ed25519.pub
 ```
-If you want to see the Public Key before copying, you can use this command:
-```bash
-type C:\Users\YouFolderName\.ssh\id_ed25519.pub
-```
 
-วิธีอื่นในการดูไฟล์ Public Key:
-เปิดไฟล์ .pub ด้วย Notepad หรือโปรแกรม text editor ใด ๆ
-และคุณสามารถเปิดไฟล์นี้ด้วยคำสั่ง:
+**หากต้องการดู Public Key ก่อนการคัดลอก สามารถใช้คำสั่งนี้**:
+- คำสั่งในเทอร์มินอล:
+  ```bash
+  # macOS
+  cat ~/.ssh/id_ed25519.pub
+  
+  # Windows
+  type C:\Users\YouFolderName\.ssh\id_ed25519.pub
+  ```
+
+- **วิธีอื่นในการดูไฟล์ Public Key**: 
+เปิดไฟล์ .pub ด้วย Notepad หรือโปรแกรม text editor ใด ๆ และคัดลอก
+หรือคุณสามารถเปิดไฟล์นี้ด้วยคำสั่ง:
 ```bash
 notepad C:\Users\YouFolderName\.ssh\id_ed25519.pub
 ```
 
 2. Go to GitHub website:
-   - Click your profile photo
-   - Go to "Settings > SSH and GPG keys"
-   - Click "New SSH key"
-   - วาง public key ที่คุณคัดลอกมาในช่อง "Key" และตั้งชื่อในช่อง "Title"
-   - Click "Add SSH key"
+   - คลิกที่รูปโปรไฟล์ของคุณ
+   - ไปที่ **Settings > SSH and GPG keys**
+   - คลิก **New SSH key**
+   - วาง public key ที่คุณคัดลอกมาในช่อง **Key** และตั้งชื่อในช่อง **Title**
+   - คลิก **Add SSH key**
 
-### Test SSH Connection
+### ทดสอบการเชื่อมต่อ
 ```bash
 ssh -T git@github.com
 ```
-If successful, you'll see a message like:
+เมื่อเชื่อมต่อสำเร็จ จะเห็นข้อความ:
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
