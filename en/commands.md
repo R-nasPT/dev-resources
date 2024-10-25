@@ -70,31 +70,31 @@ This command displays the username configured for Git, which is used in the comm
   ```bash
   git config --global user.name "New Name"
   ```
-## 5. การตั้งค่า SSH Key สำหรับ GitHub
-### การสร้าง SSH Key
-1. เปิด Terminal หรือ Command Prompt แล้วรันคำสั่งต่อไปนี้:
+## 5. Setting Up SSH Key for GitHub
+### Generate SSH Key
+1. Open Terminal and run the following command:
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-  **หมายเหตุ**: สำหรับระบบเก่าที่ไม่รองรับ Ed25519 ให้ใช้คำสั่งนี้แทน:
+  **Note**: If you're using a legacy system that doesn't support 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
-2. จากนั้น Terminal จะถามที่อยู่ที่เอาไว้เก็บ Key ถ้าเรามีชื่อไฟล์และโฟลเดอร์ที่จะเอาไว้เก็บ Key ก็ให้ใส่เป็น File path แต่ถ้าไม่มีจะใช้ชื่อไฟล์และโฟลเดอร์ที่โปรแกรมกำหนดให้ในวงเล็บคือ 
+2. When prompted, specify a file path to save the key, or press Enter to use the default path:
 ```bash
-# ตั่งชื่อไฟล์เอง
+# Custom file path
 > Enter file in which to save the key (C:\Users\YouFolderName/.ssh/id_ed25519):  C:\Users\YouFolderName/.ssh/my_custom_key
-# or
-> Enter file in which to save the key (C:\Users\YouFolderName/.ssh/id_ed25519): # สามารถกด Enter เพื่อใช้ชื่อไฟล์เริ่มต้น (id_ed25519) ได้เลย
+
+# Or press Enter for the default path
+> Enter file in which to save the key (C:\Users\YouFolderName/.ssh/id_ed25519):
 ```
-3. จากนั้นโปรแกรมก็จะถามต่อว่าอยากจะใส่ Passphrase หรือไม่
+3. Next, you’ll be asked to enter a passphrase. You can add a passphrase for additional security or press Enter to skip (not recommended for security reasons):
 ```bash
 > Enter passphrase (empty for no passphrase): [ใส่ Passphrase ที่คุณต้องการ]
 > Enter same passphrase again: [ยืนยัน Passphrase อีกครั้ง]
 ```
-  **ข้อควรทราบ**: หากคุณไม่ต้องการตั้ง Passphrase (ไม่แนะนำ เพราะคีย์ SSH จะไม่มีรหัสป้องกัน) ให้กด Enter โดยไม่ต้องพิมพ์อะไร
 
-4. จากนั้นโปรแกรมจะแจ้งเราว่า Private Key และ Public Key ได้ถูกสร้างแล้ว
+4. Once complete, you’ll see a message indicating the private and public keys have been generated:
 ```bash
 > Your identification has been saved in C:\Users\YouFolderName/.ssh/id_ed25519
 > Your public key has been saved in C:\Users\YouFolderName/.ssh/id_ed25519.pub
@@ -114,14 +114,14 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 +----[SHA256]-----+
 ```
 
-### การเพิ่ม SSH Key เข้า SSH Agent
- **ข้อควรรู้เกี่ยวกับ SSH Agent**: 
- คุณสามารถเลือก ไม่เพิ่ม SSH key ไปยัง SSH agent ได้ แต่สิ่งนี้หมายความว่าเมื่อคุณต้องการใช้ SSH key (เช่นในการเชื่อมต่อกับ GitHub หรือเซิร์ฟเวอร์), คุณจะต้องพิมพ์ Passphrase ของ SSH key ทุกครั้งที่ทำการเชื่อมต่อ หรือหากคุณไม่ได้ตั้งค่า Passphrase ไว้ การเชื่อมต่อจะดำเนินการโดยไม่ต้องผ่าน SSH agent และจะไม่ต้องพิมพ์รหัสผ่านใด ๆ
- - ถ้าคุณไม่เพิ่ม SSH key ไปยัง SSH agent: คุณจะต้องป้อน Passphrase (หากตั้งไว้) ทุกครั้งที่มีการใช้งาน SSH key
- - ถ้าคุณเพิ่ม SSH key ไปยัง SSH agent: SSH agent จะจัดการกับ SSH key ของคุณ และคุณจะไม่ต้องป้อน Passphrase ซ้ำเมื่อใช้งาน
+### Add SSH Key to SSH Agent
+ **About SSH Agentt**: 
+ You can choose not to add the SSH key to the SSH agent, but this means that when you want to use the SSH key (e.g., to connect to GitHub or a server), you will need to enter the passphrase for the SSH key every time you connect. If you haven't set a passphrase, the connection will proceed without the SSH agent, and you won't need to enter any password.
+ - If you don't add the SSH key to the SSH agent: You will need to enter the passphrase (if set) every time you use the SSH key.
+ - If you add the SSH key to the SSH agent: The SSH agent will manage your SSH key, and you won't have to re-enter the passphrase when using it.
 
-**ขั้นตอนการเพิ่ม SSH Key เข้า SSH Agent**: 
-1. เพิ่ม SSH key ไปยัง SSH agent เพื่อให้ SSH agent จัดการคีย์ให้ คุณสามารถใช้คำสั่งนี้:
+**Steps to Add Your SSH Key to the SSH Agent:**: 
+1. Add the SSH key to the SSH agent so that the SSH agent can manage the key for you. You can use the following command:
 
    - Start the SSH agent:
      ```bash
@@ -131,26 +131,26 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     ```bash
       ssh-add ~/.ssh/id_ed25519
     
-    # กรณีใช้ RSA:
+    # If using RSA:
       ssh-add ~/.ssh/id_rsa
     ```
 
-### การเพิ่ม SSH Key เข้าบัญชี GitHub
-1. คัดลอก SSH public key ไปยังคลิปบอร์ด:
-- สำหรับ  macOS:
+### Add SSH Key to GitHub Account
+1. Add SSH Key to GitHub Account
+- For  macOS:
 ```bash
 pbcopy < ~/.ssh/id_ed25519.pub
 # or
 gc .\.ssh\id_ed25519.pub
 ```
 
-- สำหรับ  Windows:
+- For  Windows:
 ```bash
 clip < C:/Users/YouFolderName/.ssh/id_ed25519.pub
 ```
 
-**หากต้องการดู Public Key ก่อนการคัดลอก สามารถใช้คำสั่งนี้**:
-- คำสั่งในเทอร์มินอล:
+**To view the public key before copying, use**:
+- Commands in the terminal:
   ```bash
   # macOS
   cat ~/.ssh/id_ed25519.pub
@@ -159,25 +159,25 @@ clip < C:/Users/YouFolderName/.ssh/id_ed25519.pub
   type C:\Users\YouFolderName\.ssh\id_ed25519.pub
   ```
 
-- **วิธีอื่นในการดูไฟล์ Public Key**: 
-เปิดไฟล์ .pub ด้วย Notepad หรือโปรแกรม text editor ใด ๆ และคัดลอก
-หรือคุณสามารถเปิดไฟล์นี้ด้วยคำสั่ง:
+- **Alternative Methods to View Public Key Files**: 
+Open the .pub file with Notepad or any text editor and copy it,
+or you can open this file using the command:
 ```bash
 notepad C:\Users\YouFolderName\.ssh\id_ed25519.pub
 ```
 
 2. Go to GitHub website:
-   - คลิกที่รูปโปรไฟล์ของคุณ
-   - ไปที่ **Settings > SSH and GPG keys**
-   - คลิก **New SSH key**
-   - วาง public key ที่คุณคัดลอกมาในช่อง **Key** และตั้งชื่อในช่อง **Title**
-   - คลิก **Add SSH key**
+   - Click your profile photo
+   - Go to **Settings > SSH and GPG keys**
+   - Click **New SSH key**
+   - Paste the public key you copied into the **Key** field and add a name in the **Title** field.
+   - Click **Add SSH key**
 
-### ทดสอบการเชื่อมต่อ
+### Test SSH Connection
 ```bash
 ssh -T git@github.com
 ```
-เมื่อเชื่อมต่อสำเร็จ จะเห็นข้อความ:
+If successful, you'll see a message like:
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
