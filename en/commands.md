@@ -52,6 +52,15 @@ This command resets the `HEAD` to the previous commit. By default, it uses the `
   git reset --hard HEAD~1
   ```
 
+  **Differences and Commands for the Three Types of Git Reset**
+
+|                      | **Effect on Modified Files**                  | **Action Required for New Commit**            | **Command**                                |
+|----------------------|-----------------------------------------------|-----------------------------------------------|--------------------------------------------|
+| **Soft Reset**       | Moves files to the Staging Area               | Ready for a new commit immediately            | `git reset --soft <target_commit_id>`      |
+| **Mixed Reset (default)** | Moves files to the Working Area          | Must add files back to the Staging Area       | `git reset --mixed <target_commit_id>`     |
+| **Hard Reset**       | Deletes changes permanently                   | Requires redoing all modifications            | `git reset --hard <target_commit_id>`      |
+
+
 ## 3. Reverting the Last Commit
 
 ### Command:
