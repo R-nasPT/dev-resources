@@ -88,11 +88,11 @@ git config user.email
 
 ### ตัวเลือก:
 - ตั้งค่าอีเมลสำหรับโปรเจกต์ปัจจุบัน:
-  ```
+  ```bash
   git config user.email "newemail@example.com"
   ```
 - ตั้งค่าอีเมลสำหรับทุกโปรเจกต์ (แบบ global):
-  ```
+  ```bash
   git config --global user.email "newemail@example.com"
   ```
 
@@ -108,11 +108,11 @@ git config user.name
 
 ### ตัวเลือก:
 - ตั้งชื่อสำหรับโปรเจกต์ปัจจุบัน:
-  ```
+  ```bash
   git config user.name "New Name"
   ```
 - ตั้งชื่อสำหรับทุกโปรเจกต์ (แบบ global):
-  ```
+  ```bash
   git config --global user.name "New Name"
   ```
 
