@@ -287,7 +287,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
   - หากคุณต้องการเพียงแค่เปลี่ยนข้อความคอมมิทล่าสุดโดยไม่เพิ่มการเปลี่ยนแปลงใหม่ สามารถทำได้โดยไม่ต้องใช้ -m เพียงแค่ใช้:
   ```
   git commit --amend
-  # แล้ว Git จะเปิด editor ให้คุณแก้ไขข้อความคอมมิท.
+  # แล้ว Git จะเปิด editor ให้คุณแก้ไขข้อความคอมมิท
   ```
 ---
 
