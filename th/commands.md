@@ -237,12 +237,14 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
   **ตัวอย่างการเขียน Commit message ที่ดี**
 
   ```bash
-  git commit -m "feat(blog): add comment section"
   git commit -m "feat: add header section on landing page"
   git commit -m "fix(product-listing): limit display product to 10"
-  git commit -m "test(payment): ensure checkout function"
-  git commit -m "test: ensure landing page"
+  git commit -m "style: format code with prettier"
+  git commit -m "refactor: simplify authentication logic"
+  git commit -m "docs: update API documentation"
+  git commit -m "chore(package.json): update dependencies to latest version"
   git commit -m "perf(dashboard): decrease loading time on graphs"
+  git commit -m "test(payment): ensure checkout function"
   ```
 **รายระเอียดของ type แต่ละแบบ**
 
@@ -252,9 +254,9 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 | fix | ใช้กำกับ Commit ที่เกี่ยวข้องกับการแก้ไขข้อผิดพลาดที่เกิดจากการเขียนโค้ด |
 | style | ใช้กำกับ Commit ที่เกี่ยวข้องกับการทำให้หน้าตาเว็บไซท์ดูดีขึ้น |
 | docs | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Documents (เอกสาร) เช่น เอกสารที่ระบุสเปคของโปรแกรม |
-| perf | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับ Performance (ประสิทธิภาพการทำงาน) ของโปรแกรม |
+| chore | ใช้กำกับ Commit ที่เกี่ยวข้องกับงานทั่วไป เช่น การอัปเดต dependencies, การตั้งค่า config, หรือการแก้ไขงานที่ไม่เกี่ยวกับโค้ดโดยตรง |
 | refactor | ใช้กำกับ Commit ที่เกี่ยวข้องกับการ Refactor คือการเขียนโค้ดอีกแบบที่ให้ผลลัพธ์เหมือนเดิม |
-| revert | ใช้กำกับ Commit ที่เกี่ยวข้องกับการ Revert |
+| perf | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับ Performance (ประสิทธิภาพการทำงาน) ของโปรแกรม |
 | test | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Test (ชุดทดสอบการทำงานของโปรแกรม) |
 
 **ตัวเลือกเพิ่มเติมสำหรับ git commit:**
