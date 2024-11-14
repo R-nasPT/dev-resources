@@ -1,6 +1,20 @@
-# Git Commands
+# Comprehensive Commands and Utilities
+## 📑 Table of Contents
+- [💻 Git Commands](#-git-commands)
+  - [📂 1. Git Areas](#1-git-areas-)
+  - [⏪ 2. Resetting to the Previous Commit](#2-resetting-to-the-previous-commit-)
+  - [🔄 3. Reverting the Last Commit](#3-reverting-the-last-commit-)
+  - [📧 4. Displaying the User's Configured Email](#4-displaying-the-users-configured-email-)
+  - [👤 5. Displaying the User's Configured Name](#5-displaying-the-users-configured-name-)
+  - [🔐 6. Setting Up SSH Key for GitHub](#6-setting-up-ssh-key-for-github-)
+  - [📝 7. How to Write Good Commit Messages](#7-how-to-write-good-commit-messages-)
+  - [🔍 8. VS Code Tracking Symbols and Their Meanings](#8-vs-code-tracking-symbols-and-their-meanings-)
+- [🔧 Utility Commands](#-utility-commands)
+  - [🔑 1. Creating a Secret Key](#1-creating-a-secret-key-)
 
-## 1. Git Areas
+# 💻 Git Commands
+
+## 1. Git Areas 📂
 
 Git organizes files into three main areas:
 
@@ -31,7 +45,7 @@ Alternative Names:
 
 Understanding these Git Areas allows you to better manage project changes and effectively organize code versions!
 
-## 2. Resetting to the Previous Commit
+## 2. Resetting to the Previous Commit ⏪
 
 ### Command :
 ```
@@ -61,7 +75,7 @@ This command resets the `HEAD` to the previous commit. By default, it uses the `
 | **Hard Reset**       | Deletes changes permanently                   | Requires redoing all modifications            | `git reset --hard <target_commit_id>`      |
 
 
-## 3. Reverting the Last Commit
+## 3. Reverting the Last Commit 🔄
 
 ### Command:
 ```
@@ -73,7 +87,7 @@ git revert HEAD
 - Reverting is the process of undoing changes by creating a new commit that mirrors the version prior to the commit being reverted.
 - Reverting is safer than resetting because the entire history of changes is preserved.
 
-## 4. Displaying the User's Configured Email
+## 4. Displaying the User's Configured Email 📧
 
 ### Command:
 ```
@@ -93,7 +107,7 @@ This command displays the email address configured for the current project in Gi
   git config --global user.email "newemail@example.com"
   ```
 
-## 5. Displaying the User's Configured Name
+## 5. Displaying the User's Configured Name 👤
 
 ### Command:
 ```
@@ -112,7 +126,7 @@ This command displays the username configured for Git, which is used in the comm
   ```bash
   git config --global user.name "New Name"
   ```
-## 6. Setting Up SSH Key for GitHub
+## 6. Setting Up SSH Key for GitHub 🔐
 ### Generate SSH Key
 1. Open Terminal and run the following command:
 ```bash
@@ -223,7 +237,7 @@ If successful, you'll see a message like:
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
-## 7. How to Write Good Commit Messages
+## 7. How to Write Good Commit Messages 📝
 According to this principle, the Commit Message should be in the format `type(scope?): subject`
 
 - `type` is the type of Commit
@@ -338,7 +352,7 @@ git commit --amend -m "New message with additional files"
 | **--amend** | Modify the latest Commit | - Fix mistakes<br>- Add forgotten files | - Prohibited for Commits that have been pushed<br>- Changes Git history | `git commit --amend -m "Fix message"` |
 
 
-## 8. VS Code Tracking Symbols and Their Meanings
+## 8. VS Code Tracking Symbols and Their Meanings 🔍
 
 ### Summary Table of Key Symbols
 
@@ -353,8 +367,8 @@ git commit --amend -m "New message with additional files"
 
 ---
 
-# Utility Commands
-## 1. Creating a Secret Key
+# 🔧 Utility Commands
+## 1. Creating a Secret Key 🔑
 ### Command:
 ```bash
 node -e "console.log(require('crypto').randomBytes(256).toString('base64'));"
