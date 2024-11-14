@@ -223,6 +223,134 @@ If successful, you'll see a message like:
 ```
 Hi username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
+## 7. How to Write Good Commit Messages
+According to this principle, the Commit Message should be in the format `type(scope?): subject`
+
+- `type` is the type of Commit
+- `(scope?)` is the scope of the changes in the Commit, and this part is optional
+- `subject` is the details of the changes made in the Commit
+
+  **Examples of well-written Commit messages**
+
+  ```bash
+  git commit -m "feat: add header section on landing page"
+  git commit -m "fix(product-listing): limit display product to 10"
+  git commit -m "style: format code with prettier"
+  git commit -m "refactor: simplify authentication logic"
+  git commit -m "docs: update API documentation"
+  git commit -m "chore(package.json): update dependencies to latest version"
+  git commit -m "perf(dashboard): decrease loading time on graphs"
+  git commit -m "test(payment): ensure checkout function"
+  ```
+**Details of each "type"**
+
+| **"type"** | **Details** |
+| --- | --- |
+| feat | Use this to indicate Commits related to adding new features, such as a registration system or profile update system |
+| fix | Use this to indicate Commits related to fixing bugs in the code |
+| style | Use this to indicate Commits related to improving the appearance of the website |
+| docs | Use this to indicate Commits related to writing Documents, such as documents specifying the program's specifications |
+| chore | Use this to indicate Commits related to general tasks, such as updating dependencies, configuring settings, or making changes that are not directly related to the code |
+| refactor | Use this to indicate Commits related to refactoring, which means rewriting the code in a different way while maintaining the same output |
+| perf | Use this to indicate Commits related to improving the performance (efficiency) of the program |
+| test | Use this to indicate Commits related to writing tests (test suites) for the program's functionality |
+
+### Additional options for git commit:
+#### 1. Using -m (Message)
+1. Prepare the files to be Committed
+```bash
+git add file1.txt file2.txt    # Add only the specific files you want
+git add .                      # Add all modified files
+```
+
+2. Perform the Commit
+```bash
+git commit -m "Explain the changes made"
+```
+
+##### How it works:
+- Use this when you want to Commit the changes in the files in the Staging Area
+- This command will Commit only the files added to the Staging Area using `git add` beforehand
+
+##### When it's appropriate:
+- When you want to control which files to Commit
+- When you want to separate Commits into distinct sets by feature
+- When you have new files that have not yet been Tracked
+
+#### 2. Using -am (Add + Message)
+```bash
+git commit -am "Explain the changes made"
+```
+##### How it works:
+- Use this when you want to Commit the changes in the Tracked files and you want Git to automatically add those files to the Staging Area
+- This command will Commit all the changes in the Tracked files that have been modified, without the need to use `git add`
+
+##### When it's appropriate:
+- When you've modified multiple existing files
+- When you want to Commit all the modified files together
+- When you're confident that all the changes should be in the same Commit
+
+##### Important Considerations
+- It does not include new files that have not been Tracked yet
+- You should check the file status with `git status` before using this
+
+#### 3. Using --amend
+
+1. Modify only the Commit message
+```bash
+git commit --amend -m "New Commit message"
+```
+
+2. Add a forgotten file to the Commit
+```bash
+git add forgotten_file.txt
+git commit --amend --no-edit    # Use the same Commit message
+```
+
+3. Modify both the files and the message
+```bash
+git add new_changes.txt
+git commit --amend -m "New message with additional files"
+```
+
+##### When it's appropriate:
+- To fix a typo in the Commit message
+- To add a file that was forgotten in the same set of changes
+- To combine small, related changes into the latest Commit
+
+##### Important Considerations
+1. Do not use it for Commits that:
+   - Have already been pushed to a Remote
+   - Have been pulled by others
+   - Are on a Branch shared with others
+
+2. Because --amend will:
+   - Change the Commit hash
+   - Create a new Git history
+   - Potentially cause issues when Merging
+
+### Comparison Table for Commit Options
+
+| Option | Usage | Advantages | Considerations | Example Command |
+|----------|----------|-------|-------------|----------------|
+| **-m** | Commit files in the Staging Area | - Control which files to Commit<br>- Suitable for separating Commits by feature | - Requires `git add` before every Commit | `git commit -m "Add login system"` |
+| **-am** | Commit all Tracked files | - Convenient and fast<br>- No need for `git add` | - May accidentally Commit files you don't want | `git commit -am "Fix login page bug"` |
+| **--amend** | Modify the latest Commit | - Fix mistakes<br>- Add forgotten files | - Prohibited for Commits that have been pushed<br>- Changes Git history | `git commit --amend -m "Fix message"` |
+
+
+## 8. VS Code Tracking Symbols and Their Meanings
+
+### Summary Table of Key Symbols
+
+| Symbol | Status Name | Meaning | Management |
+|-----------|-----------|-----------|------------|
+| **U** | Untracked | New files that have never been Tracked | `git add <file>` |
+| **M** | Modified | Files that have been modified and not yet Staged | `git add <file>` or `git commit -am` |
+| **A** | Added | New files that have been Staged | Ready for Commit |
+| **D** | Deleted | Files that have been deleted | `git rm <file>` |
+| **R** | Renamed | Files that have been renamed | `git mv <old> <new>` |
+| **C** | Copied | Files that have been copied | - |
+
 ---
 
 # Utility Commands
