@@ -1,6 +1,6 @@
 # Comprehensive Commands and Utilities
 ## สารบัญ
-- [Git Areas](#git-areas)
+- [Git Areas](#1-git-areas)
 - [Resetting to Previous Commit](#resetting-to-previous-commit)
 - [Reverting Last Commit](#reverting-last-commit)
 - [Showing Email of Configured User](#showing-email-of-configured-user)
