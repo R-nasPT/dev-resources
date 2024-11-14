@@ -1,3 +1,14 @@
+# Comprehensive Commands and Utilities
+## สารบัญ
+- [Git Areas](#git-areas)
+- [Resetting to Previous Commit](#resetting-to-previous-commit)
+- [Reverting Last Commit](#reverting-last-commit)
+- [Showing Email of Configured User](#showing-email-of-configured-user)
+- [Setting up SSH Key for GitHub](#setting-up-ssh-key-for-github)
+- [Writing Good Commit Messages](#writing-good-commit-messages)
+- [Explanation of Status Symbols in VS Code](#status-symbols-in-vs-code)
+- [Generating a Secret Key](#generating-a-secret-key)
+
 # Git Commands
 
 ## 1. Git Areas
