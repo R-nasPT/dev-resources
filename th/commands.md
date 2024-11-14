@@ -355,18 +355,6 @@ git commit --amend -m "ข้อความใหม่พร้อมไฟล
 | **R** | Renamed | ไฟล์ที่ถูกเปลี่ยนชื่อ | `git mv <old> <new>` |
 | **C** | Copied | ไฟล์ที่ถูกคัดลอก | - |
 
-### สีและสัญลักษณ์แสดงสถานะของ Git ใน VS Code
-
-| สี | สถานะ | ความหมาย | สัญลักษณ์ |
-|---------|---------|-----------|------------|
-| **เขียว** (Green) | Untracked | ไฟล์ใหม่ที่ยังไม่เคยถูก Track | U |
-| **น้ำตาล/เบจ** (Brown/Beige) | Modified | ไฟล์ที่มีการแก้ไขแต่ยังไม่ได้ Stage | M |
-| **เขียว** (Green) | Added/Staged | ไฟล์ถูกเพิ่มเข้า Staging Area | A |
-| **แดง** (Red) | Deleted | ไฟล์ถูกลบ | D |
-| **น้ำเงิน** (Blue) | Renamed/Moved | ไฟล์ถูกเปลี่ยนชื่อหรือย้าย | R |
-| **แดง** (Red) | Problems Modified | มีข้อผิดพลาดในไฟล์ที่แก้ไข | "2, M" (2 problems in this file - Modified) |
-| **แดง** (Red) | Problems Untracked | มีข้อผิดพลาดในไฟล์ใหม่ | "3, U" (3 problems in this file - Untracked) |
-
 ---
 
 # Utility Commands
