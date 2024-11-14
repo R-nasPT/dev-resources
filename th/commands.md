@@ -1,13 +1,16 @@
 # Comprehensive Commands and Utilities
 ## สารบัญ
-- [Git Areas](#1-git-areas)
-- [Resetting to Previous Commit](#resetting-to-previous-commit)
-- [Reverting Last Commit](#reverting-last-commit)
-- [Showing Email of Configured User](#showing-email-of-configured-user)
-- [Setting up SSH Key for GitHub](#setting-up-ssh-key-for-github)
-- [Writing Good Commit Messages](#writing-good-commit-messages)
-- [Explanation of Status Symbols in VS Code](#status-symbols-in-vs-code)
-- [Generating a Secret Key](#generating-a-secret-key)
+- [Git Commands](#git-commands)
+  - [Git Areas](#1-git-areas)
+  - [การรีเซ็ตไปยังคอมมิทก่อนหน้า](2-การรีเซ็ตไปยังคอมมิทก่อนหน้า)
+  - [การย้อนกลับคอมมิทล่าสุด](#3-การย้อนกลับคอมมิทล่าสุด)
+  - [แสดงอีเมลของผู้ใช้ที่ตั้งค่าไว้](#4-แสดงอีเมลของผู้ใช้ที่ตั้งค่าไว้)
+  - [แสดงชื่อของผู้ใช้ที่ตั้งค่าไว้](#5-แสดงชื่อของผู้ใช้ที่ตั้งค่าไว้)
+  - [การตั้งค่า-ssh-key-สำหรับ-github](#6-การตั้งค่า-ssh-key-สำหรับ-github)
+  - [วิธีการเขียน-commit-message-ที่ดี](#7-วิธีการเขียน-commit-message-ที่ดี)
+  - [สัญลักษณ์-track-ใน-vs-code-และความหมาย](#8-สัญลักษณ์-track-ใน-vs-code-และความหมาย)
+- [Uutility Commands](#utility-commands)
+  - [การสร้าง Secret Key](#1-การสร้าง-secret-key)
 
 # Git Commands
 
