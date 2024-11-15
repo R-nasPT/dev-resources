@@ -256,7 +256,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 - **`<type>`**  
   คือประเภทของการเปลี่ยนแปลง หรือ ชนิดของ Commit
 
-- **`scope (optional)`**  
+- **`(<scope>)`** *(ไม่จำเป็นต้องมี)*  
   ใช้ระบุขอบเขตของการเปลี่ยนแปลง เช่น ส่วนของโปรเจกต์ที่แก้ไข (`product-listing`, `dashboard`)  
   *(สามารถละได้หากไม่ต้องการระบุ)*
 
