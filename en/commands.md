@@ -240,9 +240,41 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 ## 7. How to Write Good Commit Messages 📝
 According to this principle, the Commit Message should be in the format `type(scope?): subject`
 
-- `type` is the type of Commit
-- `(scope?)` is the scope of the changes in the Commit, and this part is optional
-- `subject` is the details of the changes made in the Commit
+### Recommended Extended Format:
+```bash
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+- **`<type>`**  
+  Specifies the type of change or the nature of the commit.
+
+- **`scope (optional)`**  
+  Specifies the area of the project affected by the change (e.g., `dashboard`, `product-listing`).
+  - Use it to clarify the scope of the change.
+  - If not needed, it can be omitted.
+
+- **`<description> or Subject`** *(optional)*  
+  A short, concise message summarizing the commit. Follow these rules:
+  - Summary in present tense (e.g., "fix bug", not "fixed bug").
+  - Do not capitalize the first word unnecessarily.
+  - Do not end with a period (.).
+
+- **`[optional body]`** *(optional)*  
+  This section provides additional context or details about the change. Examples:
+  - The motivation or reason behind the change.
+  - A comparison with the previous behavior.
+  - Explanation of prior behavior and the new behavior
+  - Implications or caveats related to the change
+  - Details of any conflicts or trade-offs.
+
+- **`[optional footer(s)]`** *(optional)*  
+  Used for additional references or metadata, such as:
+  - Linking to issue or task IDs (e.g., Closes #123, Fixes JIRA-456)
+  - Guidance for testing the changes.
+  - Notes about breaking changes, prefixed with **BREAKING CHANGE**.
 
   **Examples of well-written Commit messages**
 
