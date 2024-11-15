@@ -288,6 +288,15 @@ According to this principle, the Commit Message should be in the format `type(sc
   git commit -m "perf(dashboard): decrease loading time on graphs"
   git commit -m "test(payment): ensure checkout function"
   ```
+   **Full Conventional Commit Example**
+  ```bash
+  refactor(api): migrate to v2 endpoints
+
+  BREAKING CHANGE: The old v1 API endpoints have been deprecated and
+  replaced with v2. Consumers must update their integrations. 
+
+  Closes #101
+  ```
 **Details of each "type"**
 
 | **"type"** | **Details** |
