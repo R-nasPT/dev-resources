@@ -251,12 +251,12 @@ According to this principle, the Commit Message should be in the format `type(sc
 - **`<type>`**  
   Specifies the type of change or the nature of the commit.
 
-- **`scope (optional)`**  
+- **`(<scope>)`** *(optional)*  
   Specifies the area of the project affected by the change (e.g., `dashboard`, `product-listing`).
   - Use it to clarify the scope of the change.
   - If not needed, it can be omitted.
 
-- **`<description> or Subject`** 
+- **`<description> or Subject`**  
   A short, concise message summarizing the commit. Follow these rules:
   - Summary in present tense (e.g., "fix bug", not "fixed bug").
   - Do not capitalize the first word unnecessarily.
