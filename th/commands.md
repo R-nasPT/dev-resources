@@ -314,6 +314,9 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 | refactor | ใช้กำกับ Commit ที่เกี่ยวข้องกับการ Refactor คือการเขียนโค้ดอีกแบบที่ให้ผลลัพธ์เหมือนเดิม หรือ ปรับปรุงโค้ดโดยไม่เปลี่ยนแปลงพฤติกรรม |
 | perf | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับ Performance (ประสิทธิภาพการทำงาน) ของโปรแกรม |
 | test | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Test (ชุดทดสอบการทำงานของโปรแกรม) |
+| build | ใช้กำกับ Commit ที่เกี่ยวข้องกับระบบ Build หรือเครื่องมือ เช่น การแก้ไขไฟล์ build scripts, การเพิ่มเครื่องมือที่ใช้ในการ build |
+| ci | ใช้กำกับ Commit ที่เกี่ยวข้องกับการตั้งค่า Continuous Integration (CI) เช่น การตั้งค่า GitHub Actions, การอัปเดต Jenkins pipeline | 
+| i18n | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับปรุงหรือเพิ่ม Internationalization (i18n) เช่น การเพิ่มไฟล์แปลภาษา, การตั้งค่าระบบรองรับหลายภาษา | 
 
 ### ตัวเลือกเพิ่มเติมสำหรับ git commit:
 #### 1. การใช้ -m (Message)
