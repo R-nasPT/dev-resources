@@ -17,7 +17,7 @@ This repository is my personal collection of useful developer resources, includi
 ## Purpose
 
 I created this repository to:
-- Keep track of useful commands that I might forget
+- Keep track of useful commands that I might forget.
 - Store links to helpful resources I've found
 - Document information about libraries I use frequently
 
