@@ -18,7 +18,7 @@ This repository is my personal collection of useful developer resources, includi
 
 I created this repository to:
 - Keep track of useful commands that I might forget.
-- Store links to helpful resources I've found
+- Store links to helpful resources I've found.
 - Document information about libraries I use frequently
 
 While this is primarily for my personal use, I've made it public in case others find it helpful. Feel free to browse and use any information you find useful!
