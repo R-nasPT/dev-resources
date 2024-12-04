@@ -285,6 +285,7 @@ According to this principle, the Commit Message should be in the format `type(sc
   git commit -m "refactor: simplify authentication logic"
   git commit -m "docs: update API documentation"
   git commit -m "chore(package.json): update dependencies to latest version"
+  git commit -m "revert: undo migration to v2 endpoints"
   git commit -m "perf(dashboard): decrease loading time on graphs"
   git commit -m "test(payment): ensure checkout function"
   ```
@@ -307,6 +308,7 @@ According to this principle, the Commit Message should be in the format `type(sc
 | docs | Use this to indicate Commits related to writing Documents, such as documents specifying the program's specifications |
 | chore | Use this to indicate Commits related to general tasks, such as updating dependencies, configuring settings, or making changes that are not directly related to the code |
 | refactor | Use this to indicate Commits related to refactoring, which means rewriting the code in a different way while maintaining the same output |
+| revert | Use this to indicate a commit that undoes a previous commit. For example, use this if you need to rollback changes introduced in an earlier commit. |
 | perf | Use this to indicate Commits related to improving the performance (efficiency) of the program |
 | test | Use this to indicate Commits related to writing tests (test suites) for the program's functionality |
 | build | Indicates a commit related to build tools or scripts, e.g., updating build dependencies. |
