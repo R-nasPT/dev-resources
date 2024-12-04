@@ -288,6 +288,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
   git commit -m "refactor: simplify authentication logic"
   git commit -m "docs: update API documentation"
   git commit -m "chore(package.json): update dependencies to latest version"
+  git commit -m "revert: undo migration to v2 endpoints"
   git commit -m "perf(dashboard): decrease loading time on graphs"
   git commit -m "test(payment): ensure checkout function"
   ```
@@ -312,6 +313,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 | docs | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Documents (เอกสาร) เช่น เอกสารที่ระบุสเปคของโปรแกรม |
 | chore | ใช้กำกับ Commit ที่เกี่ยวข้องกับงานทั่วไปหรือ งานเบ็ดเตล็ด เช่น การอัปเดต dependencies, การตั้งค่า config, หรือการแก้ไขงานที่ไม่เกี่ยวกับโค้ดโดยตรง |
 | refactor | ใช้กำกับ Commit ที่เกี่ยวข้องกับการ Refactor คือการเขียนโค้ดอีกแบบที่ให้ผลลัพธ์เหมือนเดิม หรือ ปรับปรุงโค้ดโดยไม่เปลี่ยนแปลงพฤติกรรม |
+| revert | ใช้สำหรับ Commit ที่ย้อนกลับการเปลี่ยนแปลงจาก Commit ก่อนหน้า เช่น การยกเลิกฟีเจอร์ที่ทำไปแล้ว |
 | perf | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับ Performance (ประสิทธิภาพการทำงาน) ของโปรแกรม |
 | test | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Test (ชุดทดสอบการทำงานของโปรแกรม) |
 | build | ใช้กำกับ Commit ที่เกี่ยวข้องกับระบบ Build หรือเครื่องมือ เช่น การแก้ไขไฟล์ build scripts, การเพิ่มเครื่องมือที่ใช้ในการ build |
