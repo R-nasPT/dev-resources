@@ -6,6 +6,7 @@
 - [Icon Icons](https://icon-icons.com/)
 - [OpenMoji](https://openmoji.org/)
 - [Heroicons](https://heroicons.com/)
+- [freepik](https://www.freepik.com/)
 ## UI Library
 - [Tailspark](https://tailspark.co/)
 - [Langui](https://www.langui.dev/components)
