@@ -8,6 +8,7 @@
 - [Heroicons](https://heroicons.com/)
 - [freepik](https://www.freepik.com/)
 - [simpleicons](https://simpleicons.org/)
+- [ionic](https://ionic.io/ionicons)
 ## UI Library
 - [Tailspark](https://tailspark.co/)
 - [Langui](https://www.langui.dev/components)
