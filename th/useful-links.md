@@ -9,6 +9,7 @@
 - [freepik](https://www.freepik.com/)
 - [simpleicons](https://simpleicons.org/)
 - [ionic](https://ionic.io/ionicons)
+- [Github Octicons icons](https://primer.style/foundations/icons)
 ## UI Library
 - [Tailspark](https://tailspark.co/)
 - [Langui](https://www.langui.dev/components)
