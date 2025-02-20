@@ -10,6 +10,12 @@
 - [simpleicons](https://simpleicons.org/)
 - [ionic](https://ionic.io/ionicons)
 - [Github Octicons icons](https://primer.style/foundations/icons)
+- [feather](https://feathericons.com/)
+- [lucide](https://lucide.dev/)
+- [Game Icons](https://game-icons.net/)
+- [Weather Icons](https://erikflowers.github.io/weather-icons/)
+- [Devicons](https://vorillaz.github.io/devicons/#/main)
+- [Radix Icons](https://www.radix-ui.com/icons)
 ## UI Library
 - [Tailspark](https://tailspark.co/)
 - [Langui](https://www.langui.dev/components)
