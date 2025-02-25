@@ -69,6 +69,13 @@
   ```
   This combination is used to merge Tailwind CSS classes with conditional logic for improved class management.
 
+#### **🔹 Tailwind CSS Plugins to Enhance UI Development**
+- **`tailwindcss-animated`** – Adds a set of pre-defined animations, allowing you to quickly use motion effects without writing additional CSS.  
+- **`tailwindcss-motion`** – Expands the flexibility of motion and animation, making it easier to implement customizable animations and transitions.  
+- **`tailwindcss-intersect`** – A utility to detect whether a component is in the viewport or not, perfect for lazy loading or triggering effects when the user scrolls.  
+- **`daisyUI`** – A set of pre-built UI components built on top of Tailwind CSS that helps you quickly develop UI with beautiful, customizable designs.  
+- **`flyonUI`** – A UI component library specifically designed to work seamlessly with Tailwind CSS, offering various UI elements that speed up development.
+
 ### Document & Media Processing
 - `react-to-print`: Library for printing React components.
 - `@react-pdf/renderer`: Library for creating PDF documents in React.
