@@ -19,6 +19,7 @@
 - `zustand`: Lightweight state management library.
 
 ### Utility Libraries
+- `uuid (Universal Unique Identifier)`: A library for generating unique UUIDs, commonly used to identify specific data such as users or session IDs.
 - `lodash` & `@types/lodash`: Utility functions for JavaScript.
 
 ### Select & Dropdown
