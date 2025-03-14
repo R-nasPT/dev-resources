@@ -318,6 +318,7 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 | test | ใช้กำกับ Commit ที่เกี่ยวข้องกับการเขียน Test (ชุดทดสอบการทำงานของโปรแกรม) |
 | build | ใช้กำกับ Commit ที่เกี่ยวข้องกับระบบ Build หรือเครื่องมือ เช่น การแก้ไขไฟล์ build scripts, การเพิ่มเครื่องมือที่ใช้ในการ build |
 | ci | ใช้กำกับ Commit ที่เกี่ยวข้องกับการตั้งค่า Continuous Integration (CI) เช่น การตั้งค่า GitHub Actions, การอัปเดต Jenkins pipeline | 
+| deps | สำหรับการอัพเกรดหรือดาวน์เกรด dependencies | 
 | i18n | ใช้กำกับ Commit ที่เกี่ยวข้องกับการปรับปรุงหรือเพิ่ม Internationalization (i18n) เช่น การเพิ่มไฟล์แปลภาษา, การตั้งค่าระบบรองรับหลายภาษา | 
 
 ### ตัวเลือกเพิ่มเติมสำหรับ git commit:
