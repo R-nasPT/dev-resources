@@ -313,6 +313,7 @@ According to this principle, the Commit Message should be in the format `type(sc
 | test | Use this to indicate Commits related to writing tests (test suites) for the program's functionality |
 | build | Indicates a commit related to build tools or scripts, e.g., updating build dependencies. |
 | ci | Indicates a commit related to configuring Continuous Integration (CI), e.g., GitHub Actions or Jenkins. | 
+| deps | for dependencies upgrading or downgrading commit. |
 | i18n | Indicates a commit related to internationalization (i18n), e.g., adding translations or multilingual support. |
 
 ### Additional options for git commit:
