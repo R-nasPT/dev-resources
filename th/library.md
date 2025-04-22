@@ -50,6 +50,10 @@
 - `react-fast-marquee`: ข้อความเลื่อนแบบป้ายไฟวิ่ง
 - `react-fade-in`: เอนิเมชันเฟดอินสำหรับ React
 
+### เอนิเมชันโหลดข้อมูล (Loading Indicators)
+- `react-spinners`: คอลเลกชันของ loading spinners ที่สร้างด้วย CSS สำหรับ React ใช้งานง่ายและสามารถปรับแต่งได้
+- `react-loader-spinner`: คอมโพเนนต์แสดงสถานะกำลังโหลดพร้อมสไตล์ที่หลากหลาย ใช้งานง่ายและสวยงาม
+
 ### Hooks หลากหลาย
 - `react-use`: คอลเลกชันของ React hooks ที่จำเป็น
 - `@uidotdev/usehooks`: Hooks ที่กำหนดเองหลากหลายรูปแบบ
