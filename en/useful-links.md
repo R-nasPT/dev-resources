@@ -16,6 +16,7 @@
 - [Weather Icons](https://erikflowers.github.io/weather-icons/)
 - [Devicons](https://vorillaz.github.io/devicons/#/main)
 - [Radix Icons](https://www.radix-ui.com/icons)
+- [Remix Icons](https://remixicon.com/)
 ## UI Library
 - [Tailspark](https://tailspark.co/)
 - [Langui](https://www.langui.dev/components)
