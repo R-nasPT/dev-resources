@@ -30,3 +30,5 @@
 - [Tailsc](https://tailsc.com/)
 - [Tailwind toolbox](https://www.tailwindtoolbox.com/)
 - [Uiverse](https://uiverse.io/)
+## อื่นๆ
+- https://github.com/emmabostian/developer-portfolios
