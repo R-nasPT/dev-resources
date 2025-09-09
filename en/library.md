@@ -83,7 +83,8 @@
 - `react-pdf-tailwind`: Styling for PDFs using Tailwind CSS.
 - `react-barcode`: Barcode generator for React.
 - `react-qr-code`: QR code generator for React.
-- `@zxing/library`: Library for barcode scanning.
+- `@bwip-js/browser`: A library for generating **100+ barcode formats** (such as Code128, EAN, QR, etc.) directly in the browser. Ideal for creating more **complex and customizable barcodes** compared to libraries like `react-barcode` and `react-qr-code`
+- `@zxing/library`: A library for **scanning barcodes**, supporting a wide range of barcode formats.
 - `react-media-recorder`: Library for recording audio and video in React.
 - `exceljs`: Library for reading, manipulating, and writing spreadsheet data.
 - `xlsx`: A library from **SheetJS** for working with Excel
