@@ -86,6 +86,29 @@
 - `@zxing/library`: Library for barcode scanning.
 - `react-media-recorder`: Library for recording audio and video in React.
 - `exceljs`: Library for reading, manipulating, and writing spreadsheet data.
+- `xlsx`: A library from **SheetJS** for working with Excel
+
+  🚨 **Warning: Installing `xlsx` the usual way (`npm install xlsx` or `yarn add xlsx`) contains high-severity security vulnerabilities**
+   *  **Why you should not use `xlsx` directly from the npm registry**
+     * Versions on npm may contain **high severity security vulnerabilities**
+     * SheetJS recommends installing the package directly from the **official CDN** to ensure security and the latest updates
+   * **Recommended installation method**
+
+    ```bash
+    yarn remove xlsx
+    yarn add https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+    ```
+    * ⚠️ **Note**: On newer versions of Yarn, you may encounter the following error:
+
+    ```
+    Usage Error: It seems you are trying to add a package using a https:... url
+    ```
+    
+    To fix this, specify the package name before the URL, like so:
+
+    ```bash
+    yarn add xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+    ```
 
 ### Date and Time Libraries
 - `date-fns`: A modern JavaScript date utility library for parsing, formatting, and manipulating dates.
