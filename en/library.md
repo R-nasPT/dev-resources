@@ -90,8 +90,8 @@
 
   🚨 **Warning: Installing `xlsx` the usual way (`npm install xlsx` or `yarn add xlsx`) contains high-severity security vulnerabilities**
    *  **Why you should not use `xlsx` directly from the npm registry**
-     * Versions on npm may contain **high severity security vulnerabilities**
-     * SheetJS recommends installing the package directly from the **official CDN** to ensure security and the latest updates
+       * Versions on npm may contain **high severity security vulnerabilities**
+       * SheetJS recommends installing the package directly from the **official CDN** to ensure security and the latest updates
    * **Recommended installation method**
 
     ```bash
