@@ -427,8 +427,8 @@ yarn global list
 คำสั่งนี้จะแสดงรายการแพ็กเกจที่ติดตั้งแบบ global พร้อมเวอร์ชัน เช่น:
 ```bash
 yarn global v1.22.19
-info "eslint@8.0.0" has binaries:
-   - eslint
+info "create-next-app@15.5.2" has binaries:
+   - create-next-app
 info "typescript@4.8.4" has binaries:
    - tsc
    - tsserver
