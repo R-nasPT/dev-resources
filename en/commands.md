@@ -412,6 +412,30 @@ git commit --amend -m "New message with additional files"
 | **R** | Renamed | Files that have been renamed | `git mv <old> <new>` |
 | **C** | Copied | Files that have been copied | - |
 
+## 9. Check globally installed packages with Yarn 1.x (Classic)
+### Command:
+```bash
+yarn global list
+```
+
+This command displays a list of globally installed packages along with their versions, for example:
+```bash
+yarn global v1.22.19
+info "create-next-app@15.5.2" has binaries:
+   - create-next-app
+info "typescript@4.8.4" has binaries:
+   - tsc
+   - tsserver
+```
+### Removing a global package
+```bash
+yarn global remove <package-name>
+```
+Example:
+```bash
+yarn global remove create-next-app
+```
+
 ---
 
 # 🔧 Utility Commands
