@@ -9,6 +9,7 @@
   - [🔐 6. Setting Up SSH Key for GitHub](#6-setting-up-ssh-key-for-github-)
   - [📝 7. How to Write Good Commit Messages](#7-how-to-write-good-commit-messages-)
   - [🔍 8. VS Code Tracking Symbols and Their Meanings](#8-vs-code-tracking-symbols-and-their-meanings-)
+  - [🧶 9. Check globally installed packages](#yarn-global)
 - [🔧 Utility Commands](#-utility-commands)
   - [🔑 1. Creating a Secret Key](#1-creating-a-secret-key-)
 
@@ -412,7 +413,7 @@ git commit --amend -m "New message with additional files"
 | **R** | Renamed | Files that have been renamed | `git mv <old> <new>` |
 | **C** | Copied | Files that have been copied | - |
 
-## 9. Check globally installed packages with Yarn 1.x (Classic)
+## 9. Check globally installed packages with Yarn 1.x (Classic) <a id="yarn-global"></a>
 ### Command:
 ```bash
 yarn global list
