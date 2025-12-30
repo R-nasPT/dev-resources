@@ -1,17 +1,17 @@
 # Comprehensive Commands and Utilities
 ## 📑 Table of Contents
 - [💻 Git Commands](#-git-commands)
-  - [📂 1. Git Areas](#1-git-areas-)
-  - [⏪ 2. Resetting to the Previous Commit](#2-resetting-to-the-previous-commit-)
-  - [🔄 3. Reverting the Last Commit](#3-reverting-the-last-commit-)
-  - [📧 4. Displaying the User's Configured Email](#4-displaying-the-users-configured-email-)
-  - [👤 5. Displaying the User's Configured Name](#5-displaying-the-users-configured-name-)
-  - [🔐 6. Setting Up SSH Key for GitHub](#6-setting-up-ssh-key-for-github-)
-  - [📝 7. How to Write Good Commit Messages](#7-how-to-write-good-commit-messages-)
-  - [🔍 8. VS Code Tracking Symbols and Their Meanings](#8-vs-code-tracking-symbols-and-their-meanings-)
+  - [📂 1. Git Areas](#-1-git-areas)
+  - [⏪ 2. Resetting to the Previous Commit](#-2-resetting-to-the-previous-commit)
+  - [🔄 3. Reverting the Last Commit](#-3-reverting-the-last-commit)
+  - [📧 4. Displaying the User's Configured Email](#-4-displaying-the-users-configured-email)
+  - [👤 5. Displaying the User's Configured Name](#-5-displaying-the-users-configured-name)
+  - [🔐 6. Setting Up SSH Key for GitHub](#-6-setting-up-ssh-key-for-github)
+  - [📝 7. How to Write Good Commit Messages](#-7-how-to-write-good-commit-messages)
+  - [🔍 8. VS Code Tracking Symbols and Their Meanings](#-8-vs-code-tracking-symbols-and-their-meanings)
   - [🧶 9. Check globally installed packages](#yarn-global)
 - [🔧 Utility Commands](#-utility-commands)
-  - [🔑 1. Creating a Secret Key](#1-creating-a-secret-key-)
+  - [🔑 1. Creating a Secret Key](#-1-creating-a-secret-key)
 
 # 💻 Git Commands
 
