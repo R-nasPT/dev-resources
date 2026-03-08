@@ -37,4 +37,4 @@ If you notice any errors or have suggestions, feel free to open an issue. While 
 
 ---
 
-Happy coding! 
+Happy coding!
